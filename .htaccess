@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^authenticate.json$ %{REQUEST_URI}.php
