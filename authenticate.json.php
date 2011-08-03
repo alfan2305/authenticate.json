@@ -2,27 +2,11 @@
 /**
  * authenticate.json
  * mitcho@mit.edu, August 1, 2011
+ * https://github.com/mitcho/authenticate.json
  *
  * A JSON/JSONP service for MIT certificate authentication. Tested on scripts.mit.edu.
  *
- * SETUP:
- * Put on a server such as scripts which has SSL_Client enabled for use with MIT certificates.
- * If you're on scripts, make sure you have a php.ini that looks like:
- *   magic_quotes_gpc = no
- *   extension = ldap.so
- *   extension = json.so
- * and has the following in .htaccess:
- *   RewriteEngine on
- *   RewriteRule ^authenticate.json$ %{REQUEST_URI}.php
- *
- * USAGE:
- * Include the script https://scripts.mit.edu:444/~locker/authenticate.json
- * with the parameter ?callback=... to set a JSONP wrapper function. Or, with jQuery,
- * call $.getJSON('authenticate.json?callback=?') and you'll get the object returned to you.
- *
- * The return value is an object. If certificate authentication failed, return object will
- * have property authenticated = false. Else, authenticated will be true and there will be
- * a number of other properties of the MIT user returned from LDAP + finger.
+ * Brief readme at https://github.com/mitcho/authenticate.json
  */
 
 header('content-type: application/json; charset=utf-8');
